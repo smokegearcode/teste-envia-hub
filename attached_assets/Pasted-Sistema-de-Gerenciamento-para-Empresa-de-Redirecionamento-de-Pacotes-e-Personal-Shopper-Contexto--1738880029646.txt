@@ -1,0 +1,95 @@
+Sistema de Gerenciamento para Empresa de Redirecionamento de Pacotes e Personal Shopper
+
+Contexto: Você precisa criar um sistema para gerenciar as operações de uma empresa de redirecionamento de pacotes e personal shopper. Este sistema deve abranger desde o cadastro de usuários e produtos até o gerenciamento de envios e pagamentos, com funcionalidades específicas para diferentes perfis de usuário (ADMIN e CLIENT).
+
+Tarefa: Desenvolva um sistema completo seguindo as especificações detalhadas abaixo.
+
+Tecnologias:
+
+Frontend: React
+CSS: SCSS e Tailwind CSS
+Framework visual: PrimeReact (preferencialmente) ou outro de sua preferência.
+Banco de dados: PostgreSQL
+Backend: NodeJS com Prisma ou Drizzle como ORM
+Segurança: JWT auth com controle de sessão e perfis de acesso (ADMIN, CLIENT)
+Funcionalidades:
+
+Funcionalidades Exclusivas para ADMIN:
+
+Cadastro de Usuários Atrelado a Clientes:
+
+Ao criar um usuário, um cadastro de cliente relacionado deve ser criado automaticamente.
+O cadastro de cliente deve conter os seguintes campos:
+Nome (Name)
+Nome do Meio (Middle Name)
+Sobrenome (Last Name)
+Documento (Document)
+Lista de Endereços (Address List) - Contendo os campos comuns do padrão brasileiro de endereços.
+Email
+Telefone (Phone)
+ID da Suíte (Suite ID) - Campo alfanumérico único de 8 dígitos para cada cliente.
+Cadastro de Produtos:
+
+Nome
+Descrição
+NCM
+Valor
+Cadastro de Transportadoras:
+
+Nome
+Telefone
+Email
+Lista de Chaves de API
+Lista de Valores por Peso
+Página de Configurações:
+
+Percentual de taxa sobre o valor do produto
+Percentual de taxa sobre o valor do envio
+Percentual de taxa sobre o valor de compra assistida
+Percentual de taxa sobre o valor de compras em grupo
+Valor da Hora
+Possibilitar a inclusão de mais parâmetros no futuro
+Página de Visualização de Envios Pendentes:
+
+Exibir os envios criados e pagos pelos clientes para efetivação.
+Status dos envios: Aberto, Em Andamento, Finalizado.
+Campo para Código de Rastreio.
+Funcionalidades Visíveis para CLIENT e ADMIN:
+
+Página de Visualização do Perfil:
+
+Exibir informações do usuário/cliente logado.
+Página de Carteira:
+
+Permitir adicionar fundos à carteira.
+Integração com Stripe e Mercado Pago (chaves serão fornecidas posteriormente).
+Possibilitar integração com outras APIs de pagamento no futuro.
+Página de Dashboard (Usuário Padrão):
+
+5 últimos produtos na suíte do cliente.
+Saldo da carteira.
+Códigos de rastreamento dos 5 envios mais recentes.
+Página para Criar Envios:
+
+Seleção de endereço do cliente logado.
+Seleção de transportadora.
+Seleção de produtos.
+Seleção de serviços extras.
+Cálculo do custo total do envio (baseado nos parâmetros de configuração).
+Redirecionamento para tela de pagamento (saldo da carteira ou integrações de pagamento).
+Calculadora de Frete:
+
+Cálculo baseado no preço da transportadora e dimensões do pacote.
+Página de Visualização da Suíte:
+
+Exibir suíte e produtos.
+Exibir envios e rastreamentos.
+Observações:
+
+Você deve entregar o código completo do sistema, incluindo frontend, backend e migrations do banco de dados.
+O código deve seguir as melhores práticas de desenvolvimento e utilizar as tecnologias especificadas.
+A interface deve ser responsiva e intuitiva.
+A segurança deve ser considerada em todas as etapas do desenvolvimento.
+Formato da Resposta:
+
+A resposta deve conter o código completo do projeto, organizado em pastas e arquivos de acordo com as convenções de cada tecnologia. O código deve ser funcional e pronto para ser executado.
